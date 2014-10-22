@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World!</title> 
+        <link rel="stylesheet" type="text/css" href="./node_modules/font-awesome/css/font-awesome.min.css">
+        <script src="./node_modules/angular/angular.min.js"></script>
+        <script src="./app.js"></script>
+        <script>
+            /*
+            // Load native UI library
+            var gui = require('nw.gui');
+
+            // Create an empty menu
+            var menu = new gui.Menu();
+
+            // Add some items
+            menu.append(new gui.MenuItem({ label: 'Item A' }));
+            menu.append(new gui.MenuItem({ label: 'Item B' }));
+            menu.append(new gui.MenuItem({ type: 'separator' }));
+            menu.append(new gui.MenuItem({ label: 'Item C' }));
+
+            // Remove one item
+            menu.removeAt(1);
+
+            // Popup as context menu
+            $(document).ready(function () {
+            console.log("Ready");
+            $("#contextmenu").click(function (ev) {
+                console.log("CLICKED");
+                ev.preventDefault();
+                //menu.popup(ev.x, ev.y);
+                menu.popup(50, 50);
+            });
+            });
+
+            console.log("Registered?");
+
+            // Iterate menu's items
+            for (var i = 0; i < menu.items.length; ++i) {
+                console.log(menu.items[i]);
+            }
+            */
+        </script>
+    </head>
+    <body ng-app="app" ng-controller="AppController">
+        <div><i style="-webkit-app-region: drag" class="fa fa-icon fa-bars fa-lg"></i> <i ng-click="exit();" class="fa fa-icon fa-close fa-lg"></i></div>
+        Add category: <input type="text" ng-model="inCategory"></input><button ng-click="addCategory(inCategory);">Add</button>
+        <div ng-repeat="(category, items) in categories">
+            <h3><i class="fa fa-icon fa-close" ng-click="removeCategory(category);"></i> {{ category }}</h3>
+            Add item: <input type="text" ng-model="inItem"></input><button ng-click="addItem(category, inItem);">Add</button>
+            <ul>
+                <li ng-repeat="item in items"><i class="fa fa-icon fa-close" ng-click="removeItem(category, item);"></i>{{ item }}</li>
+            </ul>
+        </div>
+    </body>
+</html>

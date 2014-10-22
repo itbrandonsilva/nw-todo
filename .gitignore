@@ -1,0 +1,5 @@
+locales
+node_modules
+*.swp
+nw*
+icudtl.dat

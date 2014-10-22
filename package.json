@@ -1,0 +1,18 @@
+{
+    "name": "nw-todo",
+    "description": "Personal todo app.",
+    "repository": "https://github.com/itbrandonsilva/nw-todo.git",
+    "main": "index.html",
+    "window": {
+        "frame": false,
+        "toolbar": true,
+        "width": 300,
+        "height": 475,
+        "resizeable": false,
+        "position": "center"
+    },
+    "dependencies": {
+        "angular": "1.3.*",
+        "font-awesome": "4.2.*"
+    }
+}
